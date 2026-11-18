@@ -1,2 +1,36 @@
+# Dependencies
 node_modules/
+
+# Environment (DB paroli, JWT secret va h.k.)
 .env
+.env.*
+!.env.example
+
+# Build
+dist/
+build/
+
+# Yuklangan fayllar (mahsulot rasmlari) — papkani saqlab, ichini ignore qilish
+uploads/*
+!uploads/.gitkeep
+
+# Loglar
+logs/
+*.log
+npm-debug.log*
+
+# PM2
+.pm2/
+ecosystem.config.local.js
+
+# Coverage / test
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/

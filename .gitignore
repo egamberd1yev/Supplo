@@ -1,2 +1,31 @@
+# Dependencies
 node_modules/
+
+# Environment (parollar, kalitlar)
 .env
+.env.*
+!.env.example
+
+# Build
+dist/
+build/
+
+# Loglar
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# Yuklangan fayllar, zaxira nusxalar
+*.zip
+*.tar.gz
