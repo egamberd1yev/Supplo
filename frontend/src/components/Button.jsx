@@ -6,9 +6,11 @@ const variants = {
 const sizes = {
   md: "px-5 py-3.5 text-[15px]",
   sm: "px-3.5 py-2 text-[13px]",
+  compact: "px-4 py-[11px] text-sm",
 };
 
 export default function Button({
+  as: Tag = "button",
   variant = "accent",
   size = "md",
   className = "",
@@ -16,11 +18,11 @@ export default function Button({
   ...props
 }) {
   return (
-    <button
+    <Tag
       className={`inline-flex items-center justify-center rounded-[10px] font-semibold transition disabled:opacity-60 ${variants[variant]} ${sizes[size]} ${className}`}
       {...props}
     >
       {children}
-    </button>
+    </Tag>
   );
 }

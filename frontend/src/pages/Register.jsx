@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Eye, EyeOff, Lock, MapPin, Package, Phone, Store } from "lucide-react";
 import AuthLayout from "../components/AuthLayout.jsx";
+import { useAuth } from "../context/AuthContext.jsx";
 import Button from "../components/Button.jsx";
 import Field from "../components/Field.jsx";
 
@@ -11,6 +12,8 @@ const roles = [
 ];
 
 export default function Register() {
+  const navigate = useNavigate();
+  const { register } = useAuth();
   const [role, setRole] = useState("shop");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -22,7 +25,10 @@ export default function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // TODO: POST /api/auth/register (role: "shop" | "dealer" — backenddagi qiymatga moslang)
-    console.log({ role, name, phone, city, password });
+    console.log({ role, name, phone, city });
+    register({ name, role, phone, city }); // parol saqlanmaydi
+    // Hozircha faqat do'kon paneli tayyor
+    if (role === "shop") navigate("/dokon/katalog");
   };
 
   return (

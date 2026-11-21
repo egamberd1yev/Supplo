@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Eye, EyeOff, Lock, Phone } from "lucide-react";
 import AuthLayout from "../components/AuthLayout.jsx";
 import Button from "../components/Button.jsx";
 import Field from "../components/Field.jsx";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -13,8 +14,9 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: POST /api/auth/login
+    // TODO: POST /api/auth/login — backend ulanganda shu yerda so'rov yuboriladi
     console.log({ phone, password, remember });
+    navigate("/dokon/katalog");
   };
 
   return (

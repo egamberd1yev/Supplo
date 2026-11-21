@@ -4,6 +4,7 @@
 @theme {
   --color-primary: #1e40af;      /* Asosiy ko'k */
   --color-accent: #fbbf24;       /* Sariq (urg'u) */
+  --color-accent-soft: #fef3c7;  /* Och sariq (kutilmoqda holati) */
   --color-page: #f1f5f9;         /* Sahifa foni */
   --color-soft-blue: #dbeafe;    /* Och ko'k */
   --color-ink: #0f172a;          /* Matn */
@@ -11,6 +12,9 @@
   --color-on-accent: #1f2937;    /* Sariq tugma ustidagi matn */
   --color-line: #e2e8f0;         /* Chegara */
   --color-success: #16a34a;      /* Muvaffaqiyat */
+  --color-success-soft: #dcfce7;
+  --color-danger: #dc2626;       /* Xato / rad etilgan */
+  --color-danger-soft: #fee2e2;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
@@ -22,4 +26,4 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-} 
+}
